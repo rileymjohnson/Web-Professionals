@@ -1,0 +1,80 @@
+--blue = #0968A0
+--grey = #777
+
+:root
+  /* keeps compatibility if calc() fails */
+  font-size 200px
+  font-size calc(.75em + .5vw)
+
+*
+  /* global properties */
+  margin 0
+  box-sizing border-box
+
+/* heading sizes */
+h1
+  font-size 
+
+
+body
+  font-size 1rem
+  background #eee
+
+#header
+  /* keeps compatibility if calc() or rem is not supported */
+  /* by adding a backup un case the style fails to compute */
+  height 80px
+  height 6rem
+  position fixed
+  top 0
+  left 0
+  width 100%
+  background --blue
+  /* keeps compatibility if calc() or rem is not supported */
+  /* by adding a backup un case the style fails to compute */
+  box-shadow 0 1px 8px #e0e0e0
+  box-shadow 0 .1rem .5rem rgba(0,0,0,.2)
+
+article
+  /* keeps compatibility if calc() or rem is not supported */
+  /* by adding a backup un case the style fails to compute */
+  width 500px
+  width calc(32rem + 40vw)
+  max-width 100%
+  /* keeps compatibility if calc() or rem is not supported */
+  /* by adding a backup un case the style fails to compute */
+  margin 108px auto 40px auto
+  margin 8rem auto 2rem auto
+  padding 50px
+  padding 4rem
+  background white
+  /* keeps compatibility if calc() or rem is not supported */
+  /* by adding a backup un case the style fails to compute */
+  box-shadow 0 1px 8px #e0e0e0
+  box-shadow 0 .1rem .5rem rgba(0,0,0,.05)
+
+footer
+  /* keeps compatibility if calc() or rem is not supported */
+  /* by adding a backup un case the style fails to compute */
+  height 80px
+  height 6rem
+  background --grey
+
+
+
+/*
+bootstrap modifications for square theme
+*/
+
+.form-control {
+  border-radius: 0px;
+}
+.btn {
+  border-radius: 0px;
+}
+.alert {
+  border-radius: 0px;
+}
+.customAlert {
+  display: none;
+}

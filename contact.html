@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="web professionals website">
+    <meta name="author" content="Riley johnson and Connor Hay">
+    <title>Web Professionals - Contact</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header id="header">
+      <img alt="Navigation Menu Button" id="navbutton" src="images/nav.png" /><img alt="Logo" id="logo" src="images/logo.png" />
+    </header>
+    <div id="navshadow"></div>
+    <nav id="nav">
+      <a class="navitem" href="index.html">Home</a>
+      <a class="navitem" href="about.html">About</a>
+      <a class="navitem" href="school.html">School of Web</a>
+      <a class="navitem" href="contact.html">Contact</a>
+    </nav>
+    <main>
+      <article>
+        <h2>Contact Us</h2>
+        <p>We appreciate your feedback! Due to the large volume of messages we recieve it may take a while for us to respond</p>
+        <h4>Address</h4>
+        <p>WebProfessionals.org aka the World Organization of Webmasters<br />
+        P.O. Box 584<br />
+        Washington, IL 61571-0584
+        </p>
+        <h4>Phone</h4>
+        <p>(916) 989-2933</p>
+        <h4>Email</h4>
+        <span class="emailText">info@joinwow.org</span>
+        <p>Comments or questions are welcome</p>
+        <h4>Contact Form</h4>
+        <form id="contactForm" method="post" action="/formsend">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" />
+          </div>
+          <div class="form-group">
+            <div class="alert alert-danger customAlert" id="nameAlert">
+              <strong>Oops!</strong> You did not enter your name
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" />
+          </div>
+          <div class="form-group">
+            <div class="alert alert-danger customAlert" id="emailAlert">
+              <strong>Oops!</strong> You did not enter your email
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="comment">Comments or questions</label>
+            <textarea id="comment" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <div class="alert alert-danger customAlert" id="commentAlert">
+              <strong>Oops!</strong> You did not enter a comment of question
+            </div>
+          </div>
+          <div class="form-group">
+          <input type="reset" class="btn btn-danger btn-lg" value="Reset" />
+          <input type="submit" class="btn btn-primary btn-lg" value="Submit" />
+          </div>
+        </form>
+      </article>
+    </main>
+    <footer id="footer">
+      <section>
+        Copyright WebProfessionals.org All Rights Reserved 2016
+      </section>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
+</html>

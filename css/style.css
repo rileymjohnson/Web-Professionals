@@ -1,0 +1,233 @@
+:root {
+/* keeps compatibility if calc() fails */
+  font-size: 200px;
+  font-size: calc(0.75em + 0.5vw);
+}
+* {
+/* global properties */
+  margin: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 4px brighten(#0968a0, 10);
+}
+/* heading sizes */
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2.1rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.8rem;
+}
+/* convert px to em */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0 0.5em 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin: 0 0 0.5em 0;
+}
+body {
+  font-size: 20px;
+  font-size: 1rem;
+  background: #eee;
+}
+#header {
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  height: 80px;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0968a0;
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  box-shadow: 0 1px 8px #e0e0e0;
+  box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.2);
+}
+#logo {
+  padding: 16px;
+  padding: 1rem;
+  height: 100%;
+}
+#nav {
+  width: 360px;
+  width: 24rem;
+  max-width: 85%;
+  height: 100%;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: all 0.2s;
+  box-shadow: 0 0 16px rgba(0,0,0,0);
+  box-shadow: 0 0 1rem rgba(0,0,0,0);
+  margin-left: -360px;
+  margin-left: -24rem;
+  transition: all 0.2s;
+}
+#nav.open {
+/* styles when navigation is open */
+  margin-left: 0;
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+}
+#nav a.navitem {
+  display: block;
+  padding: 16px;
+  padding: 1em;
+  color: #000;
+  text-decoration: none;
+  color: rgba(0,0,0,0.8);
+  transition: all 0.2s;
+}
+#nav a.navitem.active,
+#nav a.navitem:active {
+  background: rgba(0,0,0,0.1);
+}
+#navbutton {
+  width: 80px;
+  width: 5rem;
+  height: 80px;
+  height: 5rem;
+  padding: 10px;
+  padding: 1.5em 1rem;
+  margin: 0;
+  cursor: pointer;
+}
+/*
+overlay that allows the user to click on the page to dismiss the sliding navbar
+*/
+
+#navshadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+/* styles when navigation is open */
+#navshadow.open {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+main {
+  min-height: calc(100% - 10rem);
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  margin: 108px auto 0 auto;
+  margin: 7rem auto 0 auto;
+}
+/* large image */
+img.heroimg {
+  float: right;
+  width: 50%;
+  max-width: 100%;
+  padding: 8px;
+  padding: 1rem;
+  padding-top: 0px;
+}
+@media screen and (max-width: 600px) {
+  img.heroimg {
+    width: 100%;
+    padding: 0px;
+  	padding: 0rem;
+  	margin-bottom: 8px;
+  	margin-bottom: 1rem;
+  	box-shadow: 0 1px 8px #ccc;
+    box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,.2);
+  }
+}
+article {
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  width: 500px;
+  width: calc(32rem + 40vw);
+  max-width: 100%;
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  margin: 40px auto 40px auto;
+  margin: 2rem auto 2rem auto;
+  padding: 50px;
+  padding: 4rem;
+  background: #fff;
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  box-shadow: 0 1px 8px #e0e0e0;
+  box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.05);
+}
+footer {
+/* keeps compatibility if calc() or rem is not supported */
+/* by adding a backup un case the style fails to compute */
+  height: 80px;
+  height: 5rem;
+  background: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer section {
+  line-height: 80px;
+  line-height: 6rem;
+  text-align: center;
+  font-size: 32px;
+  font-size: 1.2rem;
+  height: 0;
+}
+
+/*
+bootstrap modifications for square theme
+*/
+.form-control {
+  border-radius: 0px;
+}
+.btn {
+  border-radius: 0px;
+}
+.alert {
+  border-radius: 0px;
+}
+.customAlert {
+  display: none;
+}
+
+@media screen and (max-width: 360px) {
+  #logo {
+    width: 70%;
+  }
+}
+
+.emailText {
+  color: #6D99D6;
+}
